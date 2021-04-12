@@ -1,5 +1,11 @@
-import Home from './Home';
 import { Route, Switch } from 'react-router-dom';
+
+import Header from "./components/layout/header"
+import Home from './components/home';
+import BrowseBy from "./components/browseBy"
+import MovieInfo from "./components/movieInfo"
+
+import { MoviesProvider } from "./contexts/movies"
 
 /**
  * This function is used to simulate performance benchmarking.
@@ -24,9 +30,24 @@ export const trackPageCompletedLoading = () => {
 
 const App = () => {
   return (
-    <Switch>
-      <Route path="/" exact component={Home} />
-    </Switch>
+    <>
+      <Header />
+      <Switch>
+          <Route path="/" exact >
+            <MoviesProvider>
+              <Home />
+            </MoviesProvider>
+          </Route>
+          <Route path="/:movieId/movieInfo" exact >
+              <MovieInfo />
+          </Route>
+          <Route path="/browseby/:genre" exact >
+            <MoviesProvider>
+                <BrowseBy />
+              </MoviesProvider>
+          </Route>
+      </Switch>
+    </>
   );
 };
 

@@ -1,0 +1,30 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
+.bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #eee;
+    margin: 0 0 20px 0;
+}
+.search {
+    flex: 1;
+}
+.search input {
+    width: 100%;
+}
+.icon {
+    width: 24px;
+    height: 24px;
+    margin: 16px;
+}
+.iconBox {
+    background-color: #2245E1
+}
+.pageTitle {
+    margin-left: 16px;
+}

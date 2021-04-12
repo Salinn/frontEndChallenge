@@ -1,0 +1,87 @@
+.container {
+    width: 90%;
+}
+.grid {
+    width: 90%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.row {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.col {
+    flex: 1;
+}
+
+.align-br {
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+@media only screen and (min-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }  
+}
+
+@media only screen and (min-width: 1000px) {
+    .grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.card {
+    padding: 10 0 10 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+}
+
+.space-bottom {
+    margin-bottom: 2rem;
+}
+
+.grey-text {
+    color: rgb(197, 197, 197)
+}
+
+.black-text {
+    color: black;
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.select {
+    width: 268px;
+    height: 50px;
+    font-size: 100%;
+    color: grey;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    padding: 10px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 10px;
+    border: 2px solid grey;
+    background: url("../../assets/Chevron.svg") no-repeat right #fff;
+    background-position-x: 244px;
+  }
