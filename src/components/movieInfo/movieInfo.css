@@ -22,12 +22,30 @@
 
 .row {
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
 }
 
 .col {
     flex: 1;
+}
+
+.col-4 {
+    flex: 4;
+}
+
+.full-size-poster {
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    transform-origin: top left;
+    height: 40rem;
+}
+
+.actor-image {
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
 }
 
 .grey-text {

@@ -5,7 +5,7 @@ const CastCard = (props) => {
 
     return (
         <div className="col">
-            <img src={person.profilePath} alt={person.name} />
+            <img className="actor-image" src={person.profilePath} alt={person.name} />
             <h3>Character Name: {" "}{person.character}</h3>
             <p className="grey-text">Actor Name: {" "}{person.name}</p>
         </div>

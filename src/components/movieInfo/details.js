@@ -5,9 +5,9 @@ const Details = (props) => {
     return (
         <div className="row">
             <div className="col">
-                <img src={movie.posterPath} alt={`Poster for ${movie.title}`}/>
+                <img className="full-size-poster" src={movie.posterPath} alt={`Poster for ${movie.title}`}/>
             </div>
-            <div className="col">
+            <div className="col-4">
                 <h1>{movie.title}{" "}<span className="grey-text">({movie.releaseDate.slice(0,4)})</span></h1>
                 <h4>{movie.genres.join(", ")}</h4>
                 <h6>Director: {" "}{movie.director.name}</h6>
